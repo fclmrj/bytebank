@@ -10,11 +10,17 @@ export class NovaTransferenciaComponent{
 
   @Output() aoTransferir = new EventEmitter<any>();
 
-  valor: number = 12;
-  destino: number = 13;
+  valor: number;
+  destino: number;
 
   transferir(){
     console.log('Solicitada nova transferência');
     this.aoTransferir.emit({valor: this.valor, destino: this.destino});
+    this.limparCampos();
+  }
+
+  limparCampos(){
+    this.valor = 0;
+    this.destino = 0;
   }
 }
