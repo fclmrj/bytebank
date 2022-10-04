@@ -23,11 +23,11 @@ get todas(): Observable<Transferencia[]>{
   return this.httpClient.get<Transferencia[]>(this.url);
 }
 
-adicionar(transferencia: any){
-
+adicionar(transferencia: any): Observable<Transferencia[]>{
+  console.log("Adicionando via service ..");
   this.hidratar(transferencia);
 
-  this.listaTransferencias.push(transferencia);
+  return this.httpClient.post<Transferencia[]>(this.url, transferencia);
 }
 
 private hidratar(transferencia: any){
