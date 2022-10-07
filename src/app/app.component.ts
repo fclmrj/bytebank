@@ -1,5 +1,5 @@
 import { TransferenciaService } from './services/transferencia.service';
-import { NovaTransferenciaComponent } from './nova-transferencia/nova.transferencia.component';
+
 import { Component } from '@angular/core';
 
 @Component({
